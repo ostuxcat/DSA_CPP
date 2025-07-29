@@ -9,17 +9,31 @@ using namespace std;
 //     vector<int> arr = {4, 1, 5, 2, 3};
 //     BubbleSort(arr);
 //     for(int i=0;i<arr.size();i++){
-//         cout << arr[i] << endl;
+//         cout << arr[i] << " ";
 //     }
+//     cout << endl;
 //     return 0;
 // }
 //
 // SELECTION SORT
+// #include<vector>
+// #include "./SelectionSort.cpp"
+// int main(){
+//     vector<int> arr = {4, 1, 5, 2, 3};
+//     SelectionSort(arr);
+//     for(int i=0;i<arr.size();i++){
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+//
+// INSERTION SORT
 #include<vector>
-#include "./SelectionSort.cpp"
+#include "./InsertionSort.cpp"
 int main(){
     vector<int> arr = {4, 1, 5, 2, 3};
-    SelectionSort(arr);
+    InsertionSort(arr);
     for(int i=0;i<arr.size();i++){
         cout << arr[i] << " ";
     }
