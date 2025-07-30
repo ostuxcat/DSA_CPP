@@ -28,12 +28,25 @@ using namespace std;
 //     return 0;
 // }
 //
-// INSERTION SORT
+// // INSERTION SORT
+// #include<vector>
+// #include "./InsertionSort.cpp"
+// int main(){
+//     vector<int> arr = {4, 1, 5, 2, 3};
+//     InsertionSort(arr);
+//     for(int i=0;i<arr.size();i++){
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+//
+// DUTCH NATIONAL FLAG ALGORITHM
 #include<vector>
-#include "./InsertionSort.cpp"
+#include "./DutchNationalFlagAlgorithm.cpp"
 int main(){
-    vector<int> arr = {4, 1, 5, 2, 3};
-    InsertionSort(arr);
+    vector<int> arr = {2, 0, 2, 1, 1, 0, 1, 2, 0, 0};
+    DutchSort(arr);
     for(int i=0;i<arr.size();i++){
         cout << arr[i] << " ";
     }

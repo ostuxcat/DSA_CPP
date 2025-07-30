@@ -1,0 +1,17 @@
+#include <vector>
+void DutchSort(std::vector<int> &arr){
+    int low=0,mid=0,high=arr.size()-1;
+    while(mid<=high){
+        if(arr[mid]==0){
+            std::swap(arr[low], arr[mid]);
+            low++;
+            mid++;
+        }else if(arr[mid]==1){
+            mid++;
+        }else if(arr[mid]==2){
+            std::swap(arr[mid], arr[high]);
+            high--;
+        }
+    }
+    return;
+}
