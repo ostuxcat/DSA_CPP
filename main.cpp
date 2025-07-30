@@ -3,7 +3,7 @@ using namespace std;
 // BUBBLE SORT
 // #include <iostream>
 // #include <vector>
-// #include "./BubbleSort.cpp"
+// #include "./Modules/BubbleSort.cpp"
 // using namespace std;
 // int main(){
 //     vector<int> arr = {4, 1, 5, 2, 3};
@@ -17,7 +17,7 @@ using namespace std;
 //
 // SELECTION SORT
 // #include<vector>
-// #include "./SelectionSort.cpp"
+// #include "./Modules/SelectionSort.cpp"
 // int main(){
 //     vector<int> arr = {4, 1, 5, 2, 3};
 //     SelectionSort(arr);
@@ -28,9 +28,9 @@ using namespace std;
 //     return 0;
 // }
 //
-// // INSERTION SORT
+// INSERTION SORT
 // #include<vector>
-// #include "./InsertionSort.cpp"
+// #include "./Modules/InsertionSort.cpp"
 // int main(){
 //     vector<int> arr = {4, 1, 5, 2, 3};
 //     InsertionSort(arr);
@@ -42,14 +42,14 @@ using namespace std;
 // }
 //
 // DUTCH NATIONAL FLAG ALGORITHM
-#include<vector>
-#include "./DutchNationalFlagAlgorithm.cpp"
-int main(){
-    vector<int> arr = {2, 0, 2, 1, 1, 0, 1, 2, 0, 0};
-    DutchSort(arr);
-    for(int i=0;i<arr.size();i++){
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    return 0;
-}
+// #include<vector>
+// #include "./Modules/DutchNationalFlagAlgorithm.cpp"
+// int main(){
+//     vector<int> arr = {2, 0, 2, 1, 1, 0, 1, 2, 0, 0};
+//     DutchSort(arr);
+//     for(int i=0;i<arr.size();i++){
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }

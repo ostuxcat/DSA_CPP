@@ -1,6 +1,5 @@
 #include<vector>
-using namespace std;
-void InsertionSort(vector<int> &arr){
+void InsertionSort(std::vector<int> &arr){
     int n = arr.size();
     for(int i=1;i<n;i++){
         int curr=arr[i], prev=i-1;
