@@ -55,19 +55,32 @@ using namespace std;
 // }
 
 // MERGE 2 SORTED ARRAYS
+// #include<vector>
+// #include "./Modules/MergeSortedArray.cpp"
+// int main(){
+//     vector<int> arr1 = {1, 2, 3, 0, 0, 0};
+//     vector<int> arr2 = {2, 5, 6};
+//     int m=3, n=3;
+//     MergeSortedArray(arr1, m, arr2, n);
+//     for(int i=0;i<arr1.size();i++){
+//         cout << arr1[i] << " ";
+//     }
+//     cout << endl;
+//     for(int i=0;i<arr2.size();i++){
+//         cout << arr2[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+//
+// NEXT PERMUTATION
 #include<vector>
-#include "./Modules/MergeSortedArray.cpp"
+#include "./Modules/NextPermutation.cpp"
 int main(){
-    vector<int> arr1 = {1, 2, 3, 0, 0, 0};
-    vector<int> arr2 = {2, 5, 6};
-    int m=3, n=3;
-    MergeSortedArray(arr1, m, arr2, n);
-    for(int i=0;i<arr1.size();i++){
-        cout << arr1[i] << " ";
-    }
-    cout << endl;
-    for(int i=0;i<arr2.size();i++){
-        cout << arr2[i] << " ";
+    vector<int> arr = {1, 2, 3};
+    NextPermutation(arr);
+    for(int i=0;i<arr.size();i++){
+        cout << arr[i] << " ";
     }
     cout << endl;
     return 0;
