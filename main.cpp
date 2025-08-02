@@ -96,10 +96,21 @@ using namespace std;
 // }
 
 // VALID PALINDROME
+// #include<string>
+// #include "./Modules/PalindromeString.cpp"
+// int main(){
+//     std:string str = "racecar";
+//     cout<<ValidPalindrome(str)<<endl;
+//     return 0;
+// }
+//
+// REMOVE OCCURENCES FROM A STRING.
 #include<string>
-#include "./Modules/PalindromeString.cpp"
+#include<iostream>
+#include "./Modules/RemoveOccurences.cpp"
 int main(){
-    std:string str = "racecar";
-    cout<<ValidPalindrome(str)<<endl;
+    std::string str = "daabcbaabcbc";
+    std::string part = "abc";
+    cout << removeOccurences(str, part) << endl;
     return 0;
 }
