@@ -85,3 +85,11 @@ using namespace std;
 //     cout << endl;
 //     return 0;
 // }
+
+// isPalindrome
+#include <string>
+#include "./Modules/PalindromeString.cpp"
+int main(){
+    string str = "racecar";
+    cout << isPalindrome(str) << endl;
+}
