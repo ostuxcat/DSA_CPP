@@ -87,9 +87,19 @@ using namespace std;
 // }
 
 // isPalindrome
-#include <string>
+// #include <string>
+// #include "./Modules/PalindromeString.cpp"
+// int main(){
+//     string str = "racecar";
+//     cout << isPalindrome(str) << endl;
+//     return 0;
+// }
+
+// VALID PALINDROME
+#include<string>
 #include "./Modules/PalindromeString.cpp"
 int main(){
-    string str = "racecar";
-    cout << isPalindrome(str) << endl;
+    std:string str = "racecar";
+    cout<<ValidPalindrome(str)<<endl;
+    return 0;
 }
