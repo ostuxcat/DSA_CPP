@@ -99,18 +99,29 @@ using namespace std;
 // #include<string>
 // #include "./Modules/PalindromeString.cpp"
 // int main(){
-//     std:string str = "racecar";
+//     string str = "racecar";
 //     cout<<ValidPalindrome(str)<<endl;
 //     return 0;
 // }
 //
 // REMOVE OCCURENCES FROM A STRING.
-#include<string>
+// #include<string>
+// #include<iostream>
+// #include "./Modules/RemoveOccurences.cpp"
+// int main(){
+//     string str = "daabcbaabcbc";
+//     string part = "abc";
+//     cout << removeOccurences(str, part) << endl;
+//     return 0;
+// }
+
+// PERMUTATION IN STRING
+#include <string>
 #include<iostream>
-#include "./Modules/RemoveOccurences.cpp"
+#include "./Modules/StringPermutation.cpp"
 int main(){
-    std::string str = "daabcbaabcbc";
-    std::string part = "abc";
-    cout << removeOccurences(str, part) << endl;
+    string str1 = "ab";
+    string str2 = "eidbaooo";
+    cout << stringPermutation(str1, str2) << endl;
     return 0;
 }
