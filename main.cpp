@@ -116,12 +116,22 @@ using namespace std;
 // }
 
 // PERMUTATION IN STRING
-#include <string>
+// #include <string>
+// #include<iostream>
+// #include "./Modules/StringPermutation.cpp"
+// int main(){
+//     string str1 = "ab";
+//     string str2 = "eidbaooo";
+//     cout << stringPermutation(str1, str2) << endl;
+//     return 0;
+// }
+
+// REVERSE WORDS IN STRING
+#include<string>
 #include<iostream>
-#include "./Modules/StringPermutation.cpp"
+#include "./Modules/ReverseString.cpp"
 int main(){
-    string str1 = "ab";
-    string str2 = "eidbaooo";
-    cout << stringPermutation(str1, str2) << endl;
+    string str = "the sky is blue";
+    cout << reverseWords(str) << endl;
     return 0;
 }
