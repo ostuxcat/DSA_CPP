@@ -127,11 +127,24 @@ using namespace std;
 // }
 
 // REVERSE WORDS IN STRING
-#include<string>
-#include<iostream>
-#include "./Modules/ReverseString.cpp"
+// #include<string>
+// #include<iostream>
+// #include "./Modules/ReverseString.cpp"
+// int main(){
+//     string str = "the sky is blue";
+//     cout << reverseWords(str) << endl;
+//     return 0;
+// }
+
+// STRING COMPRESSION
+#include<vector>
+#include "./Modules/StringCompression.cpp"
 int main(){
-    string str = "the sky is blue";
-    cout << reverseWords(str) << endl;
+    vector<char> arr = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+    stringCompress(arr);
+    for(char a:arr){
+        cout<<a<<" ";
+    }
+    cout<<endl;
     return 0;
 }
