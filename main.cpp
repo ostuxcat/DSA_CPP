@@ -137,14 +137,33 @@ using namespace std;
 // }
 
 // STRING COMPRESSION
-#include<vector>
-#include "./Modules/StringCompression.cpp"
+// #include<vector>
+// #include "./Modules/StringCompression.cpp"
+// int main(){
+//     vector<char> arr = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+//     stringCompress(arr);
+//     for(char a:arr){
+//         cout<<a<<" ";
+//     }
+//     cout<<endl;
+//     return 0;
+// }
+
+
+// MATH FUNCTIONS
+#include "./Modules/MathFunctions.cpp"
 int main(){
-    vector<char> arr = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
-    stringCompress(arr);
-    for(char a:arr){
-        cout<<a<<" ";
-    }
-    cout<<endl;
+    int n = 153, a = 20, b = 28;
+    cout << isPrimeNum(n) << endl;
+    cout << countPrimes(n) << endl;
+    cout << countDigits(n) << endl;
+    cout << isArmstrong(n) << endl;
+    cout << findGCD(a, b) << endl;
+    cout << euclidGCD(a, b) << endl;
+    cout << euclidGCDRec(a, b) << endl;
+    cout << getlcm(a, b) << endl;
+    cout << reverseNumUsingStrings(n) << endl;
+    cout << reverseNum(n) << endl;
+    cout << palindromeNum(n) << endl;
     return 0;
 }
