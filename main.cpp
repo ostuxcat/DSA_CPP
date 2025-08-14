@@ -151,19 +151,33 @@ using namespace std;
 
 
 // MATH FUNCTIONS
-#include "./Modules/MathFunctions.cpp"
+// #include "./Modules/MathFunctions.cpp"
+// int main(){
+//     int n = 153, a = 20, b = 28;
+//     cout << isPrimeNum(n) << endl;
+//     cout << countPrimes(n) << endl;
+//     cout << countDigits(n) << endl;
+//     cout << isArmstrong(n) << endl;
+//     cout << findGCD(a, b) << endl;
+//     cout << euclidGCD(a, b) << endl;
+//     cout << euclidGCDRec(a, b) << endl;
+//     cout << getlcm(a, b) << endl;
+//     cout << reverseNumUsingStrings(n) << endl;
+//     cout << reverseNum(n) << endl;
+//     cout << palindromeNum(n) << endl;
+//     return 0;
+// }
+//
+// 2D ARRAYS / 2D VECTORS
+#include<vector>
+#include "./Modules/2dArrays.cpp"
 int main(){
-    int n = 153, a = 20, b = 28;
-    cout << isPrimeNum(n) << endl;
-    cout << countPrimes(n) << endl;
-    cout << countDigits(n) << endl;
-    cout << isArmstrong(n) << endl;
-    cout << findGCD(a, b) << endl;
-    cout << euclidGCD(a, b) << endl;
-    cout << euclidGCDRec(a, b) << endl;
-    cout << getlcm(a, b) << endl;
-    cout << reverseNumUsingStrings(n) << endl;
-    cout << reverseNum(n) << endl;
-    cout << palindromeNum(n) << endl;
+    int rows=4, cols=3, key=8;
+    // LINEAR SEARCH USING 2D ARRAYS
+    int arr[4][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    cout << LinearSearchArray(arr, rows, cols, key) << endl;
+    // LINEAR SEARCH USING 2D VECTORS
+    vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    cout << LinearSearchVector(vec, rows, cols, key) << endl;
     return 0;
 }
