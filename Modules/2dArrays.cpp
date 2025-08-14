@@ -1,17 +1,17 @@
 #include<vector>
-bool LinearSearchArray(int arr[][3], int rows, int cols, int key){
+std::pair<int, int> LinearSearchArray(int arr[][3], int rows, int cols, int key){
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
-            if(arr[i][j]==key)return true;
+            if(arr[i][j]==key)return {i, j};
         }
     }
-    return false;
+    return {-1, -1};
 }
-bool LinearSearchVector(std::vector<std::vector<int>> arr, int rows, int cols, int key){
+std::pair<int, int> LinearSearchVector(std::vector<std::vector<int>> arr, int rows, int cols, int key){
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
-            if(arr[i][j]==key)return true;
+            if(arr[i][j]==key)return {i, j};
         }
     }
-    return false;
+    return {-1, -1};
 }
