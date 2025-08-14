@@ -45,7 +45,7 @@ bool isArmstrong(int n){
 }
 int findGCD(int a, int b){
     int gcd = 1;
-    for(int i=1;i<=min(a, b);i++){
+    for(int i=1;i<=std::min(a, b);i++){
         if(a%i==0 && b%i==0){
             gcd = i;
         }
@@ -61,7 +61,7 @@ int euclidGCD(int a, int b){
             b = b%a;
         }
     }
-    return max(a, b);
+    return std::max(a, b);
 }
 int euclidGCDRec(int a, int b){
     if(b==0) return a;
@@ -73,7 +73,7 @@ int getlcm(int a, int b){
 int reverseNumUsingStrings(int n){
     std::string finalNum = "";
     while(n>0){
-        finalNum+=to_string(n%10);
+        finalNum+=std::to_string(n%10);
         n = n/10;
     }
     return std::stoi(finalNum);
