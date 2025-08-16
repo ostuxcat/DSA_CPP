@@ -172,14 +172,17 @@ using namespace std;
 #include<vector>
 #include "./Modules/2dArrays.cpp"
 int main(){
-    int rows=4, cols=3, key=8;
+    int rows=3, cols=3, key=8;
     // LINEAR SEARCH USING 2D ARRAYS
-    int arr[4][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     std::pair<int, int> LinearArr = LinearSearchArray(arr, rows, cols, key);
     cout << LinearArr.first << " : " << LinearArr.second << endl;
     // LINEAR SEARCH USING 2D VECTORS
     vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     std::pair<int, int> LinearVec = LinearSearchVector(vec, rows, cols, key);
     cout <<  LinearVec.first << " : " << LinearVec.second << endl;
+    // CALCULATING THE HIGHEST SUM OF THE ROW IN AN VECTOR.
+    cout << MaxRowSum(vec, rows, cols) << endl;
+    cout << MaxColSum(vec, rows, cols) << endl;
     return 0;
 }
