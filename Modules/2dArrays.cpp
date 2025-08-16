@@ -1,6 +1,6 @@
 #include <climits>
-#include<vector>
-#include <iostream>
+#include<utility>
+#include<algorithm>
 std::pair<int, int> LinearSearchArray(int arr[][3], int rows, int cols, int key){
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
@@ -9,16 +9,7 @@ std::pair<int, int> LinearSearchArray(int arr[][3], int rows, int cols, int key)
     }
     return {-1, -1};
 }
-std::pair<int, int> LinearSearchVector(std::vector<std::vector<int>> arr, int rows, int cols, int key){
-    for(int i=0;i<rows;i++){
-        for(int j=0;j<cols;j++){
-            if(arr[i][j]==key)return {i, j};
-        }
-    }
-    return {-1, -1};
-}
-
-int MaxRowSum(std::vector<std::vector<int>> arr, int rows, int cols){
+int MaxRowSum(int arr[][3], int rows, int cols){
     int finalOut = INT_MIN;
     for(int i=0;i<rows;i++){
         int rowSum = 0;
@@ -30,7 +21,7 @@ int MaxRowSum(std::vector<std::vector<int>> arr, int rows, int cols){
     return finalOut;
 }
 
-int MaxColSum(std::vector<std::vector<int>> arr, int rows, int cols){
+int MaxColSum(int arr[][3], int rows, int cols){
     int finalOut = INT_MIN;
     for(int i=0;i<rows;i++){
         int rowSum = 0;
@@ -40,4 +31,13 @@ int MaxColSum(std::vector<std::vector<int>> arr, int rows, int cols){
         finalOut = std::max(finalOut, rowSum);
     }
     return finalOut;
+}
+
+int DiagonalSum(int arr[][3], int n){
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i][i];
+        if(i!=n-i-1) sum+=arr[i][n-i-1];
+    }
+    return sum;
 }

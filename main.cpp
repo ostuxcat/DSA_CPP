@@ -168,8 +168,7 @@ using namespace std;
 //     return 0;
 // }
 //
-// 2D ARRAYS / 2D VECTORS
-#include<vector>
+// 2D ARRAYS
 #include "./Modules/2dArrays.cpp"
 int main(){
     int rows=3, cols=3, key=8;
@@ -177,12 +176,11 @@ int main(){
     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     std::pair<int, int> LinearArr = LinearSearchArray(arr, rows, cols, key);
     cout << LinearArr.first << " : " << LinearArr.second << endl;
-    // LINEAR SEARCH USING 2D VECTORS
-    vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    std::pair<int, int> LinearVec = LinearSearchVector(vec, rows, cols, key);
-    cout <<  LinearVec.first << " : " << LinearVec.second << endl;
-    // CALCULATING THE HIGHEST SUM OF THE ROW IN AN VECTOR.
-    cout << MaxRowSum(vec, rows, cols) << endl;
-    cout << MaxColSum(vec, rows, cols) << endl;
+    // CALCULATING THE HIGHEST SUM OF THE ROWS IN AN ARRAY.
+    cout << MaxRowSum(arr, rows, cols) << endl;
+    // CALCULATING THE HIGHEST SUM OF THE COLS IN AN ARRAY.
+    cout << MaxColSum(arr, rows, cols) << endl;
+    // CALCULATING THE SUM OF DIAGONALS IN AN ARRAY.
+    cout << DiagonalSum(arr, rows) << endl;
     return 0;
 }
