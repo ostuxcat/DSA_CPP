@@ -28,5 +28,16 @@ std::pair<int, int> MatrixSearch1(std::vector<std::vector<int>> vec, int target)
 }
 
 std::pair<int, int> MatrixSearch2(std::vector<std::vector<int>> vec, int target){
+    int m = vec.size(), n=vec[0].size();
+    int row=0, col=n-1;
+    while(row<m && col>=0){
+        if(vec[row][col]==target){
+            return {row, col};
+        }else if(vec[row][col]>target){
+            col--;
+        }else if(vec[row][col]<target){
+            row++;
+        }
+    }
     return {-1, -1};
 }
