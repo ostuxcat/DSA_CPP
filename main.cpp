@@ -186,19 +186,36 @@ using namespace std;
 // }
 
 // 2D VECTORS
+// #include<vector>
+// #include "./Modules/2dVectors.cpp"
+// int main(){
+//     int key=8;
+//     // LINEAR SEARCH USING 2D VECTOR
+//     vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//     std::pair<int, int> LinearVec = LinearSearch(vec, key);
+//     cout << LinearVec.first << " : " << LinearVec.second << endl;
+//     // CALCULATING THE HIGHEST SUM OF THE ROWS IN AN VECTOR.
+//     cout << MaxRowSum(vec) << endl;
+//     // CALCULATING THE HIGHEST SUM OF THE COLS IN AN VECTOR.
+//     cout << MaxColSum(vec) << endl;
+//     // CALCULATING THE SUM OF DIAGONALS IN AN VECTOR.
+//     cout << DiagonalSum(vec) << endl;
+//     return 0;
+// }
+
+
+// BINARY SEARCH IN 2D MATRIX
 #include<vector>
-#include "./Modules/2dVectors.cpp"
+#include "./Modules/SearchMatrix.cpp"
 int main(){
-    int key=8;
-    // LINEAR SEARCH USING 2D VECTOR
-    vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    std::pair<int, int> LinearVec = LinearSearch(vec, key);
-    cout << LinearVec.first << " : " << LinearVec.second << endl;
-    // CALCULATING THE HIGHEST SUM OF THE ROWS IN AN VECTOR.
-    cout << MaxRowSum(vec) << endl;
-    // CALCULATING THE HIGHEST SUM OF THE COLS IN AN VECTOR.
-    cout << MaxColSum(vec) << endl;
-    // CALCULATING THE SUM OF DIAGONALS IN AN VECTOR.
-    cout << DiagonalSum(vec) << endl;
+    // BINARY SEARCH IN 2D MATRIX - 1
+    vector<vector<int>> vec1 = {{1, 2, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}};
+    std::pair<int, int> Mat1Vec = MatrixSearch1(vec1, 34);
+    cout << Mat1Vec.first << " : " << Mat1Vec.second << endl;
+
+    // BINARY SEARCH IN 2D MATRIX - 2
+    vector<vector<int>> vec2 = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
+    std::pair<int, int> Mat2Vec = MatrixSearch2(vec2, 5);
+    cout << Mat2Vec.first << " : " << Mat2Vec.second << endl;
     return 0;
 }
