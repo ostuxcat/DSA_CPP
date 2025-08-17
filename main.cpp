@@ -169,18 +169,36 @@ using namespace std;
 // }
 //
 // 2D ARRAYS
-#include "./Modules/2dArrays.cpp"
+// #include "./Modules/2dArrays.cpp"
+// int main(){
+//     int rows=3, cols=3, key=8;
+//     // LINEAR SEARCH USING 2D ARRAYS
+//     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//     std::pair<int, int> LinearArr = LinearSearch(arr, rows, cols, key);
+//     cout << LinearArr.first << " : " << LinearArr.second << endl;
+//     // CALCULATING THE HIGHEST SUM OF THE ROWS IN AN ARRAY.
+//     cout << MaxRowSum(arr, rows, cols) << endl;
+//     // CALCULATING THE HIGHEST SUM OF THE COLS IN AN ARRAY.
+//     cout << MaxColSum(arr, rows, cols) << endl;
+//     // CALCULATING THE SUM OF DIAGONALS IN AN ARRAY.
+//     cout << DiagonalSum(arr, rows) << endl;
+//     return 0;
+// }
+
+// 2D VECTORS
+#include<vector>
+#include "./Modules/2dVectors.cpp"
 int main(){
-    int rows=3, cols=3, key=8;
-    // LINEAR SEARCH USING 2D ARRAYS
-    int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    std::pair<int, int> LinearArr = LinearSearchArray(arr, rows, cols, key);
-    cout << LinearArr.first << " : " << LinearArr.second << endl;
-    // CALCULATING THE HIGHEST SUM OF THE ROWS IN AN ARRAY.
-    cout << MaxRowSum(arr, rows, cols) << endl;
-    // CALCULATING THE HIGHEST SUM OF THE COLS IN AN ARRAY.
-    cout << MaxColSum(arr, rows, cols) << endl;
-    // CALCULATING THE SUM OF DIAGONALS IN AN ARRAY.
-    cout << DiagonalSum(arr, rows) << endl;
+    int key=8;
+    // LINEAR SEARCH USING 2D VECTOR
+    vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    std::pair<int, int> LinearVec = LinearSearch(vec, key);
+    cout << LinearVec.first << " : " << LinearVec.second << endl;
+    // CALCULATING THE HIGHEST SUM OF THE ROWS IN AN VECTOR.
+    cout << MaxRowSum(vec) << endl;
+    // CALCULATING THE HIGHEST SUM OF THE COLS IN AN VECTOR.
+    cout << MaxColSum(vec) << endl;
+    // CALCULATING THE SUM OF DIAGONALS IN AN VECTOR.
+    cout << DiagonalSum(vec) << endl;
     return 0;
 }
