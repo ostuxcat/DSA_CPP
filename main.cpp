@@ -222,14 +222,44 @@ using namespace std;
 
 
 // SPIRAL MATRIX
+// #include<vector>
+// #include "./Modules/SpiralMatrix.cpp"
+// int main(){
+//     vector<vector<int>> vec = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+//     vector<int> spiralOut = getSpiral(vec);
+//     for(int spiral:spiralOut){
+//         cout << spiral << " ";
+//     }
+//     cout<<endl;
+//     return 0;
+// }
+
+
+// TWO SUM
+// #include<vector>
+// #include "./Modules/TwoSum.cpp"
+// int main(){
+//     vector<int> vec = {5, 2, 11, 7, 15};
+//     pair<int, int> out = TwoSum(vec, 9);
+//     cout << out.first << ", " << out.second << endl;
+//     return 0;
+// }
+
+// FIND MISSING & DUPLICATE VALUES
+// #include<vector>
+// #include "./Modules/FindMissingDuplicate.cpp"
+// int main(){
+//     vector<vector<int>> vec = {{9, 1, 7}, {8, 9, 2}, {3, 4, 6}};
+//     pair<int, int> out = FindMissingDuplicate(vec);
+//     cout << out.first << ", " << out.second << endl;
+//     return 0;
+// }
+
+// FIND DUPLICATE
 #include<vector>
-#include "./Modules/SpiralMatrix.cpp"
+#include "./Modules/FindMissingDuplicate.cpp"
 int main(){
-    vector<vector<int>> vec = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
-    vector<int> spiralOut = getSpiral(vec);
-    for(int spiral:spiralOut){
-        cout << spiral << " ";
-    }
-    cout<<endl;
+    vector<int> vec = {3, 1, 3, 4, 2};
+    cout << FindDuplicate(vec) << endl;
     return 0;
 }
