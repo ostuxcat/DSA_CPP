@@ -265,16 +265,32 @@ using namespace std;
 // }
 
 // THREE SUM
+// #include<vector>
+// #include "./Modules/ThreeSum.cpp"
+// int main(){
+//     vector<int> vec = {-1, 0, 1, 2, -1, -4};
+//     vector<vector<int>> out = ThreeSum(vec);
+//     for(vector<int> a:out){
+//         for(int b:a){
+//             cout << b << " ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+// FOUR SUM
 #include<vector>
-#include "./Modules/ThreeSum.cpp"
+#include "./Modules/FourSum.cpp"
 int main(){
-    vector<int> vec = {-1, 0, 1, 2, -1, -4};
-    vector<vector<int>> out = ThreeSum(vec);
-    for(vector<int> a:out){
-        for(int b:a){
-            cout << b << " ";
+    vector<int> vec = {-2, -1, -1, 1, 1, 2, 2};
+    vector<vector<int>> out = FourSum(vec);
+        for(vector<int> a:out){
+            for(int b:a){
+                cout << b << " ";
+            }
+            cout<<endl;
         }
-        cout<<endl;
-    }
     return 0;
 }
