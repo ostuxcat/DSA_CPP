@@ -256,10 +256,25 @@ using namespace std;
 // }
 
 // FIND DUPLICATE
+// #include<vector>
+// #include "./Modules/FindMissingDuplicate.cpp"
+// int main(){
+//     vector<int> vec = {3, 1, 3, 4, 2};
+//     cout << FindDuplicate(vec) << endl;
+//     return 0;
+// }
+
+// THREE SUM
 #include<vector>
-#include "./Modules/FindMissingDuplicate.cpp"
+#include "./Modules/ThreeSum.cpp"
 int main(){
-    vector<int> vec = {3, 1, 3, 4, 2};
-    cout << FindDuplicate(vec) << endl;
+    vector<int> vec = {-1, 0, 1, 2, -1, -4};
+    vector<vector<int>> out = ThreeSum(vec);
+    for(vector<int> a:out){
+        for(int b:a){
+            cout << b << " ";
+        }
+        cout<<endl;
+    }
     return 0;
 }
