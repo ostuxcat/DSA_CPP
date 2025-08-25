@@ -281,16 +281,25 @@ using namespace std;
 
 
 // FOUR SUM
+// #include<vector>
+// #include "./Modules/FourSum.cpp"
+// int main(){
+//     vector<int> vec = {-2, -1, -1, 1, 1, 2, 2};
+//     vector<vector<int>> out = FourSum(vec);
+//         for(vector<int> a:out){
+//             for(int b:a){
+//                 cout << b << " ";
+//             }
+//             cout<<endl;
+//         }
+//     return 0;
+// }
+
+// Subarray Equals K
 #include<vector>
-#include "./Modules/FourSum.cpp"
+#include "./Modules/SubarrayEqualsK.cpp"
 int main(){
-    vector<int> vec = {-2, -1, -1, 1, 1, 2, 2};
-    vector<vector<int>> out = FourSum(vec);
-        for(vector<int> a:out){
-            for(int b:a){
-                cout << b << " ";
-            }
-            cout<<endl;
-        }
+    vector<int> vec = {9, 4, 20, 3, 10, 5};
+    cout << SubarrayEqualsK(vec, 33) << endl;
     return 0;
 }
