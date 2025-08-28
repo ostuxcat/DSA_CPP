@@ -296,10 +296,23 @@ using namespace std;
 // }
 
 // Subarray Equals K
-#include<vector>
-#include "./Modules/SubarrayEqualsK.cpp"
+// #include<vector>
+// #include "./Modules/SubarrayEqualsK.cpp"
+// int main(){
+//     vector<int> vec = {9, 4, 20, 3, 10, 5};
+//     cout << SubarrayEqualsK(vec, 33) << endl;
+//     return 0;
+// }
+
+// RECURSION
+#include "./Modules/Recursion.cpp"
 int main(){
-    vector<int> vec = {9, 4, 20, 3, 10, 5};
-    cout << SubarrayEqualsK(vec, 33) << endl;
+    printN(4);
+    cout << factorial(4) << endl;
+    cout << sumN(4) << endl;
+    cout << fibonacci(6) << endl;
+    vector<int> vec = {-1, 0, 3, 5, 9, 12};
+    cout << isSorted(vec, vec.size()) << endl;
+    cout << binarySearch(vec, 9, 0, vec.size()-1) << endl;
     return 0;
 }
