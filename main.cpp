@@ -314,5 +314,7 @@ int main(){
     vector<int> vec = {-1, 0, 3, 5, 9, 12};
     cout << isSorted(vec, vec.size()) << endl;
     cout << binarySearch(vec, 9, 0, vec.size()-1) << endl;
+    vector<int> subset;
+    printSubsets(vec, subset, 0);
     return 0;
 }

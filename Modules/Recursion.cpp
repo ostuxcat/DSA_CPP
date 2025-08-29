@@ -42,3 +42,16 @@ int binarySearch(std::vector<int> vec, int target, int st, int end){
     }
     return -1;
 }
+void printSubsets(std::vector<int> &vec, std::vector<int> &subset, int i){
+    if(i==vec.size()){
+        for(int val:subset){
+            std::cout << val << " ";
+        }
+        std::cout << std::endl;
+        return;
+    }
+    subset.push_back(vec[i]);
+    printSubsets(vec, subset, i+1);
+    subset.pop_back();
+    printSubsets(vec, subset, i+1);
+}
