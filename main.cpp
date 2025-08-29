@@ -314,7 +314,17 @@ int main(){
     vector<int> vec = {-1, 0, 3, 5, 9, 12};
     cout << isSorted(vec, vec.size()) << endl;
     cout << binarySearch(vec, 9, 0, vec.size()-1) << endl;
+    vector<int> vec2 = {1, 2, 3};
     vector<int> subset;
-    printSubsets(vec, subset, 0);
+    printSubsets(vec2, subset, 0);
+    vector<int> subset2;
+    vector<vector<int>> allSubsets;
+    getSubsets(vec2, subset2, 0, allSubsets);
+    for(vector<int> val:allSubsets){
+        for(int val2:val){
+            cout << val2 << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }

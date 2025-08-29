@@ -55,3 +55,14 @@ void printSubsets(std::vector<int> &vec, std::vector<int> &subset, int i){
     subset.pop_back();
     printSubsets(vec, subset, i+1);
 }
+
+void getSubsets(std::vector<int> &vec, std::vector<int> &subset, int i, std::vector<std::vector<int>> &allSubsets){
+    if(i==vec.size()){
+        allSubsets.push_back({subset});
+        return;
+    }
+    subset.push_back(vec[i]);
+    getSubsets(vec, subset, i+1, allSubsets);
+    subset.pop_back();
+    getSubsets(vec, subset, i+1, allSubsets);
+}
