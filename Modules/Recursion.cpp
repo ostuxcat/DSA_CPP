@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 void printN(int n){
     std::cout << n << " ";
     if(n==1){
@@ -65,4 +66,20 @@ void getSubsets(std::vector<int> &vec, std::vector<int> &subset, int i, std::vec
     getSubsets(vec, subset, i+1, allSubsets);
     subset.pop_back();
     getSubsets(vec, subset, i+1, allSubsets);
+}
+
+void getSubsets2(std::vector<int> &vec, std::vector<int> &subset, int i, std::vector<std::vector<int>> &allSubsets){
+    std::sort(vec.begin(), vec.end());
+    if(i==vec.size()){
+        allSubsets.push_back({subset});
+        return;
+    }
+    subset.push_back(vec[i]);
+    getSubsets(vec, subset, i+1, allSubsets);
+    subset.pop_back();
+    int idx = i+1;
+    while(idx<vec.size() && vec[idx]==vec[idx-1]){
+        idx++;
+    }
+    getSubsets(vec, subset, idx, allSubsets);
 }
